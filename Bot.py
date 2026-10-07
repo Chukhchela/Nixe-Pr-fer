@@ -61,7 +61,7 @@ EX_MACHINA_SYSTEM_PROMPT = """
 def translate_to_ex_machina(text):
     """Запрос к бесплатной нейросети через OpenRouter"""
     response = client.chat.completions.create(
-        model="meta-llama/llama-3.3-70b-instruct:free",
+        model="openrouter/free",
         messages=[
             {"role": "system", "content": EX_MACHINA_SYSTEM_PROMPT},
             {"role": "user", "content": text}
